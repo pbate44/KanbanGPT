@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us - KanbanGPT{% endblock %}
+
+{% block additional_styles %}
+<link rel="stylesheet" href="{% static 'css/shopfront/contactus.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="contact">
+ 
+  <header class="contact__header anim anim-1">
+    <div class="contact__eyebrow">Get in touch</div>
+    <h1 id="contact-title" class="contact__title">
+      We'd love to <em>hear</em> from you
+    </h1>
+    <p class="contact__subtitle">
+      Got a question, feedback, or a bug to report? Send us a message and we'll get back to you.
+    </p>
+  </header>
+ 
+  {% if messages %}
+  <div class="contact__messages anim anim-1" aria-live="polite" aria-atomic="true">
+    {% for message in messages %}
+    <div class="contact__alert contact__alert--{{ message.tags }}" role="status">
+      {{ message }}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+ 
+  <div class="contact__body anim anim-2">
+    <div class="contact__card">
+      <form method="post" class="contact__form" novalidate>
+        {% csrf_token %}
+ 
+        <fieldset class="contact__fieldset">
+ 
+          <div class="contact__grid">
+            <div class="contact__field">
+              <label for="contact_name">Name</label>
+              <input
+                type="text"
+                id="contact_name"
+                name="name"
+                placeholder="Your name"
+                required
+                autocomplete="name"
+                value="{{ form.name.value|default_if_none:'' }}"
+                class="{% if form.name.errors %}input--error{% endif %}"
+              >
+              {% if form.name.errors %}
+              <p class="field-error">{{ form.name.errors|striptags }}</p>
+              {% endif %}
+            </div>
+ 
+            <div class="contact__field">
+              <label for="contact_email">Email</label>
+              <input
+                type="email"
+                id="contact_email"
+                name="email"
+                placeholder="you@example.com"
+                required
+                autocomplete="email"
+                value="{{ form.email.value|default_if_none:'' }}"
+                class="{% if form.email.errors %}input--error{% endif %}"
+              >
+              {% if form.email.errors %}
+              <p class="field-error">{{ form.email.errors|striptags }}</p>
+              {% endif %}
+            </div>
+          </div>
+ 
+          <div class="contact__field">
+            <label for="contact_subject">Subject</label>
+            <input
+              type="text"
+              id="contact_subject"
+              name="subject"
+              placeholder="What's this about?"
+              required
+              value="{{ form.subject.value|default_if_none:'' }}"
+              class="{% if form.subject.errors %}input--error{% endif %}"
+            >
+            {% if form.subject.errors %}
+            <p class="field-error">{{ form.subject.errors|striptags }}</p>
+            {% endif %}
+          </div>
+ 
+          <div class="contact__field">
+            <label for="contact_message">Message</label>
+            <textarea
+              id="contact_message"
+              name="message"
+              rows="5"
+              placeholder="Write your message..."
+              required
+              class="{% if form.message.errors %}input--error{% endif %}"
+            >{{ form.message.value|default_if_none:'' }}</textarea>
+            {% if form.message.errors %}
+            <p class="field-error">{{ form.message.errors|striptags }}</p>
+            {% endif %}
+          </div>
+ 
+        </fieldset>
+ 
+        <div class="contact__actions">
+          <button type="submit" class="contact__btn">Send message</button>
+          <p class="contact__fineprint">We typically reply within 24–48 hours.</p>
+        </div>
+ 
+      </form>
+    </div>
+ 
+    <aside class="contact__sidebar anim anim-3" aria-label="Alternative contact options">
+ 
+      <div class="contact__reply-card">
+        <div class="contact__reply-icon">⚡</div>
+        <p class="contact__reply-label">Typical reply time</p>
+        <p class="contact__reply-value">24 – 48 hours</p>
+      </div>
+ 
+      <div class="contact__alt-card">
+        <h2 class="contact__alt-title">What we can help with</h2>
+        <p class="contact__alt-text">
+          For account or billing issues, include your username or the email you signed up with.
+        </p>
+        <ul class="contact__alt-list">
+          <li>🔒 Billing &amp; subscriptions</li>
+          <li>🐛 Bug reports</li>
+          <li>💡 Feature requests</li>
+        </ul>
+      </div>
+ 
+    </aside>
+  </div>
+ 
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% load static %}
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SEN7KET67L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SEN7KET67L');
+</script>
+
+{% block additional_styles %}
+<link rel="stylesheet" href="{% static 'css/shopfront/2fa.css' %}">
+{% endblock %}
+
+<div class="verify-2fa-container">
+  <form class="verify-2fa-form" method="post">
+
+    <a class="verify-2fa-brand" href="/">
+      <img src="{% static 'images/logo.png' %}" alt="KanbanGPT icon" width="32" />
+      <p>KanbanGPT</p>
+    </a>
+
+    <div class="verify-2fa-icon" aria-hidden="true">🔐</div>
+
+    <h2 class="verify-2fa-heading">Two-Factor Verification</h2>
+    <p>A six-digit code has been sent to your email address. Enter it below to continue.</p>
+
+    {% if messages %}
+    <div role="alert" aria-live="assertive" class="verify-2fa-messages">
+      {% for message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% csrf_token %}
+
+    <label class="verify-2fa-label" for="code">Verification Code</label>
+    <input
+      class="verify-2fa-input"
+      type="text"
+      id="code"
+      name="code"
+      placeholder="······"
+      maxlength="6"
+      inputmode="numeric"
+      autocomplete="one-time-code"
+      required
+    />
+
+    <button class="verify-2fa-button" type="submit">Verify & Continue →</button>
+
+    <p class="verify-2fa-hint">Didn't receive a code? Check your spam folder or <a href="#">resend</a>.</p>
+
+  </form>
+</div>

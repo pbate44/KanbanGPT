@@ -1,0 +1,27 @@
+# Core Django
+Django>=5.1,<6.0
+dj-database-url
+whitenoise
+django-storages[s3]
+django-browser-reload
+
+# Database
+psycopg[binary]
+
+# File storage / processing
+boto3
+Pillow
+PyPDF2
+python-docx
+weasyprint
+
+# Auth / security
+cryptography
+
+# Utilities
+python-dotenv
+
+# Testing
+pytest
+pytest-django
+factory-boy

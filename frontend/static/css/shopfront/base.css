@@ -1,0 +1,117 @@
+:root {
+  --bg-color: #ffffff;
+  --secondary-bg-color: rgb(227, 231, 224);
+  --tertiary-bg-color: rgb(243, 244, 246);
+  --text-color: #111827;
+  --card-bg: #f9fafb;
+  --border-color: #e5e7eb;
+  --theme-main: rgb(99, 102, 241);
+  --theme-main-rgb: 99, 102, 241;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #040507;
+    --secondary-bg-color: #0f172a;
+    --tertiary-bg-color: #1e293b;
+    --text-color: #f9fafb;
+    --secondary-text-color: #111827;
+    --card-bg: #020617;
+    --border-color: rgb(var(--theme-main-rgb));
+  }
+}
+
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --secondary-bg-color: rgb(227, 231, 224);
+  --tertiary-bg-color: rgb(243, 244, 246);
+  --text-color: #111827;
+  --card-bg: #f9fafb;
+  --border-color: rgb(var(--theme-main-rgb))
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #040507;
+  --secondary-bg-color: #0f172a;
+  --tertiary-bg-color: #1e293b;
+  --text-color: #f9fafb;
+  --secondary-text-color: #111827;
+  --card-bg: #020617;
+  --border-color: rgb(var(--theme-main-rgb));
+}
+
+:root {
+  --card-tint-opacity-light: 0.6;
+  --card-tint-opacity-dark: 0.8;
+  --card-tint-opacity: var(--card-tint-opacity-light);
+  --card-color-default-rgb: 150, 150, 150;
+  --card-color-red-rgb: 255, 130, 130;
+  --card-color-orange-rgb: 255, 175, 90;
+  --card-color-yellow-rgb: 255, 225, 100;
+  --card-color-light-green-rgb: 120, 205, 140;
+  --card-color-dark-green-rgb: 80, 170, 110;
+  --card-color-teal-rgb: 70, 200, 190;
+  --card-color-cyan-rgb: 90, 230, 240;
+  --card-color-blue-rgb: 90, 140, 255;
+  --card-color-purple-rgb: var(--theme-main-rgb);
+  --card-color-magenta-rgb: 255, 110, 180;
+  --card-color-pink-rgb: 255, 150, 190;
+  --card-color-dark-rgb: 230, 230, 230;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-tint-opacity: var(--card-tint-opacity-dark);
+    --card-color-default-rgb: 45, 45, 45;
+    --card-color-red-rgb: 110, 20, 25;
+    --card-color-orange-rgb: 130, 60, 10;
+    --card-color-yellow-rgb: 130, 105, 0;
+    --card-color-light-green-rgb: 20, 80, 40;
+    --card-color-dark-green-rgb: 10, 50, 30;
+    --card-color-teal-rgb: 10, 70, 65;
+    --card-color-cyan-rgb: 15, 90, 100;
+    --card-color-blue-rgb: 25, 60, 130;
+    --card-color-purple-rgb: var(--theme-main-rgb);
+    --card-color-magenta-rgb: 110, 25, 70;
+    --card-color-pink-rgb: 130, 40, 80;
+    --card-color-dark-rgb: 15, 15, 15;
+  }
+}
+
+:root[data-theme="light"] {
+  --card-tint-opacity: var(--card-tint-opacity-light);
+  --card-color-default-rgb: 150, 150, 150;
+  --card-color-red-rgb: 255, 130, 130;
+  --card-color-orange-rgb: 255, 175, 90;
+  --card-color-yellow-rgb: 255, 225, 100;
+  --card-color-light-green-rgb: 120, 205, 140;
+  --card-color-dark-green-rgb: 80, 170, 110;
+  --card-color-teal-rgb: 70, 200, 190;
+  --card-color-cyan-rgb: 90, 230, 240;
+  --card-color-blue-rgb: 90, 140, 255;
+  --card-color-purple-rgb: var(--theme-main-rgb);
+  --card-color-magenta-rgb: 255, 110, 180;
+  --card-color-pink-rgb: 255, 150, 190;
+  --card-color-dark-rgb: 230, 230, 230;
+}
+
+
+:root[data-theme="dark"] {
+  --card-tint-opacity: var(--card-tint-opacity-dark);
+  --card-color-default-rgb: 45, 45, 45;
+  --card-color-red-rgb: 110, 20, 25;
+  --card-color-orange-rgb: 130, 60, 10;
+  --card-color-yellow-rgb: 130, 105, 0;
+  --card-color-light-green-rgb: 20, 80, 40;
+  --card-color-dark-green-rgb: 10, 50, 30;
+  --card-color-teal-rgb: 10, 70, 65;
+  --card-color-cyan-rgb: 15, 90, 100;
+  --card-color-blue-rgb: 25, 60, 130;
+  --card-color-purple-rgb: var(--theme-main-rgb);
+  --card-color-magenta-rgb: 110, 25, 70;
+  --card-color-pink-rgb: 130, 40, 80;
+  --card-color-dark-rgb: 15, 15, 15;
+}
+
+
+:root { --bs-primary: var(--theme-main); --bs-primary-rgb: var(--theme-main-rgb); }

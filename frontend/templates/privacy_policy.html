@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Privacy Policy - KanbanGPT{% endblock %}
+
+{% block additional_styles %}
+<link rel="stylesheet" href="{% static 'css/shopfront/privacy.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="policy">
+ 
+  <header class="policy__header anim anim-1">
+    <div class="policy__eyebrow">Legal</div>
+    <h1 id="policy-title" class="policy__title">
+      Your <em>privacy</em>, explained
+    </h1>
+    <p class="policy__subtitle">
+      What we collect, why we collect it, and how you stay in control of your data.
+    </p>
+  </header>
+ 
+  <div class="policy__body anim anim-2">
+ 
+    <nav class="policy__toc" aria-label="Privacy policy contents">
+      <h2 class="policy__toc-title">Contents</h2>
+      <ol class="policy__toc-list">
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#data-we-collect">Data we collect</a></li>
+        <li><a href="#how-we-use">How we use it</a></li>
+        <li><a href="#legal-basis">Legal basis (UK/EU)</a></li>
+        <li><a href="#sharing">Sharing your data</a></li>
+        <li><a href="#ai-processing">AI processing</a></li>
+        <li><a href="#retention">Retention</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#your-rights">Your rights</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <article class="policy__content">
+ 
+      <section class="policy__section" id="who-we-are">
+        <h2 data-icon="🏢">Who we are</h2>
+        <p>
+          KanbanGPT ("we", "us") provides an AI-powered Kanban board to help you organise and manage work.
+          This Privacy Policy applies to our website and services (the "Service").
+        </p>
+      </section>
+ 
+      <section class="policy__section" id="data-we-collect">
+        <h2 data-icon="📋">Data we collect</h2>
+        <p>We may collect the following categories of personal data:</p>
+        <ul>
+          <li><strong>Account data:</strong> name, email, password (stored securely as a hash), account preferences.</li>
+          <li><strong>Usage data:</strong> pages viewed, feature usage, approximate device/browser details.</li>
+          <li><strong>Content you submit:</strong> boards, cards, notes, attachments, comments, and messages you add.</li>
+          <li><strong>Payment data:</strong> handled by our payment processor (e.g., Stripe). We do not store full card details.</li>
+          <li><strong>Support data:</strong> messages you send us via the contact form, and any attachments you provide.</li>
+        </ul>
+      </section>
+ 
+      <section class="policy__section" id="how-we-use">
+        <h2 data-icon="⚙️">How we use your data</h2>
+        <ul>
+          <li>Provide and operate the Service (create accounts, manage boards, deliver features).</li>
+          <li>Process payments and manage subscriptions.</li>
+          <li>Improve performance, reliability, and user experience.</li>
+          <li>Communicate with you about service updates, security, and support requests.</li>
+          <li>Prevent fraud, abuse, or misuse of the Service.</li>
+        </ul>
+      </section>
+ 
+      <section class="policy__section" id="legal-basis">
+        <h2 data-icon="⚖️">Legal basis (UK/EU)</h2>
+        <p>If you are in the UK/EU, we process personal data under one or more of these legal bases:</p>
+        <ul>
+          <li><strong>Contract:</strong> to provide the Service you signed up for.</li>
+          <li><strong>Legitimate interests:</strong> to improve and secure the Service and prevent abuse.</li>
+          <li><strong>Consent:</strong> where required (e.g., certain cookies or marketing communications).</li>
+          <li><strong>Legal obligation:</strong> where we must comply with laws (e.g., accounting/tax).</li>
+        </ul>
+      </section>
+ 
+      <section class="policy__section" id="sharing">
+        <h2 data-icon="🤝">Sharing your data</h2>
+        <p>We do not sell your personal data. We may share data with trusted service providers to run the Service, such as:</p>
+        <ul>
+          <li><strong>Payment processing:</strong> e.g., Stripe (for subscriptions and billing).</li>
+          <li><strong>Hosting and infrastructure:</strong> servers, storage, and delivery networks.</li>
+          <li><strong>Analytics:</strong> to understand product usage (optional).</li>
+          <li><strong>Customer support tooling:</strong> email/helpdesk services (if used).</li>
+        </ul>
+        <p>We may also disclose information if required by law or to protect the rights, safety, and security of users and the Service.</p>
+      </section>
+
+      <section class="policy__section" id="ai-processing">
+        <h2 data-icon="🤖">AI processing</h2>
+        <p>
+          When you use AI features in KanbanGPT, your queries — which may include content from your boards and cards — are
+          sent to AI model providers for processing. These requests are routed via <strong>OpenRouter</strong>, a third-party
+          AI gateway service.
+        </p>
+        <ul>
+          <li>
+            <strong>OpenRouter:</strong> By default, OpenRouter operates a Zero Data Retention (ZDR) policy, meaning your
+            prompt content is not stored or logged by OpenRouter. Only basic request metadata (timestamp, model used,
+            token counts) is retained for billing and operational purposes. You can review OpenRouter's privacy practices
+            at <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">openrouter.ai/privacy</a>.
+          </li>
+          <li>
+            <strong>Upstream AI model providers:</strong> OpenRouter proxies requests to the underlying AI model
+            provider you have selected (e.g. OpenAI, Anthropic, Google, Mistral). Each provider has its own data
+            retention and usage policies. We recommend reviewing the privacy policy of the specific provider
+            associated with the model you use.
+          </li>
+          <li>
+            <strong>What this means for your data:</strong> Card content sent as part of an AI query is processed
+            solely to generate a response and is not used by KanbanGPT for training or analytics. However, upstream
+            providers may have their own policies regarding data use.
+          </li>
+        </ul>
+        <p>
+          If you have questions about which model provider your account uses, or would like to opt out of AI features,
+          please contact us at <a href="mailto:support@kanbangpt.ai">support@kanbangpt.ai</a>.
+        </p>
+      </section>
+
+      <section class="policy__section" id="retention">
+        <h2 data-icon="🗓️">Retention</h2>
+        <p>
+          We keep personal data only as long as necessary for the purposes described in this policy, including to provide the Service,
+          comply with legal obligations, resolve disputes, and enforce agreements.
+        </p>
+        <p>You may request deletion of your account and associated data (see "Your rights" below).</p>
+      </section>
+ 
+      <section class="policy__section" id="security">
+        <h2 data-icon="🔒">Security</h2>
+        <p>
+          We use reasonable technical and organisational measures to protect your data, including access controls and encryption where appropriate.
+          No method of transmission or storage is 100% secure, but we work hard to protect your information.
+        </p>
+      </section>
+ 
+      <section class="policy__section" id="your-rights">
+        <h2 data-icon="✋">Your rights</h2>
+        <p>Depending on your location, you may have rights to:</p>
+        <ul>
+          <li>Access the personal data we hold about you</li>
+          <li>Correct inaccurate or incomplete data</li>
+          <li>Request deletion of your data</li>
+          <li>Object to or restrict certain processing</li>
+          <li>Request portability of your data</li>
+          <li>Withdraw consent (where processing is based on consent)</li>
+        </ul>
+        <p>To exercise these rights, contact us using the details below.</p>
+      </section>
+ 
+      <section class="policy__section" id="cookies">
+        <h2 data-icon="🍪">Cookies</h2>
+        <p>
+          We may use cookies or similar technologies to keep you signed in, remember preferences, and improve the Service.
+          You can control cookies through your browser settings. Where required, we'll request consent for non-essential cookies.
+        </p>
+      </section>
+ 
+      <section class="policy__section" id="contact">
+        <h2 data-icon="✉️">Contact</h2>
+        <p>If you have questions about this policy or your data, contact us:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:support@kanbangpt.ai">support@kanbangpt.ai</a></li>
+        </ul>
+      </section>
+ 
+    </article>
+  </div>
+ 
+  <footer class="policy__footer anim anim-3">
+    <a class="policy__btn" href="{% url 'contact_us' %}">Contact support</a>
+    <p class="policy__fineprint">This policy may change as the product evolves.</p>
+  </footer>
+ 
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Message sent - KanbanGPT{% endblock %}
+
+{% block additional_styles %}
+<link rel="stylesheet" href="{% static 'css/shopfront/contactus.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="contact">
+  <section class="contact__card contact__card--success" aria-labelledby="success-title">
+    <header class="contact__header">
+      <p class="contact__eyebrow">Support</p>
+
+      <div class="contact__success-icon" aria-hidden="true">
+        ✓
+      </div>
+
+      <h1 id="success-title" class="contact__title">Message sent</h1>
+      <p class="contact__subtitle">
+        Thanks — we’ve received your message. We typically reply within 24–48 hours.
+      </p>
+    </header>
+
+    <div class="contact__success-panel" role="status" aria-live="polite">
+      <h2 class="contact__success-title">What happens next</h2>
+      <ul class="contact__success-list">
+        <li><span class="contact__success-dot" aria-hidden="true"></span> Your message is now in our support inbox.</li>
+        <li><span class="contact__success-dot" aria-hidden="true"></span> If you included your email, we’ll reply there.</li>
+        <li><span class="contact__success-dot" aria-hidden="true"></span> For billing/account issues, please include your username.</li>
+      </ul>
+
+      <p class="contact__help">
+        If you don’t hear back after 48 hours, check your spam folder or send a follow-up.
+      </p>
+    </div>
+
+    <div class="contact__actions">
+      <a class="contact__btn contact__btn--ghost" href="{% url 'contact_us' %}">
+        Send another message
+      </a>
+
+      <a class="contact__btn" href="{% url 'home' %}">
+        Back to home
+      </a>
+
+      <p class="contact__fineprint">
+        Tip: If you reported a bug, include screenshots and steps to reproduce.
+      </p>
+    </div>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}KanbanGPT - AI-Powered Kanban Board{% endblock %}
+
+{% block additional_styles %}
+<link rel="stylesheet" href="{% static 'css/shopfront/about_page.css' %}">
+{% endblock %}
+
+{% block nav_links %}
+<ul class="nav-links">
+  <li><a href="#product">Features</a></li>
+  <li><a href="#story">About</a></li>
+</ul>
+{% endblock nav_links %}
+
+{% block content %}
+
+<main>
+  
+  <section class="hero">
+    <h1 class="hero-title anim-fade-up delay-1">
+      Think deeper, move faster,<br>and get things <em>done</em>
+    </h1>
+    <p class="hero-sub anim-fade-up delay-2">
+      KanbanGPT is a digital kanban board that combines note-taking with AI — so you can brainstorm ideas, surface details, and get more done
+    </p>
+    <div class="hero-actions anim-fade-up delay-3">
+      <a href="/sign-up" class="btn-primary-lg">Start for free →</a>
+      <a href="#story" class="btn btn-outline-lg">About this project</a>
+    </div>
+    <p class="hero-meta anim-fade-up delay-4">Free to use &nbsp;·&nbsp; Open source &nbsp;·&nbsp; Currently in Beta</p>
+
+    <div class="hero-mockup anim-fade-up delay-5">
+      <div class="mockup-glow"></div>
+      <div class="mockup-frame">
+        <div class="mockup-topbar">
+          <div class="mockup-dots">
+            <span class="dot-r"></span>
+            <span class="dot-y"></span>
+            <span class="dot-g"></span>
+          </div>
+          <div class="mockup-title-bar">Q2 Product Roadmap — KanbanGPT</div>
+        </div>
+        <div class="mockup-body">
+
+          <div>
+            <div class="mockup-col-head">Backlog <span class="col-count">3</span></div>
+            <div class="mockup-card">
+              <div class="mockup-card-tag tag-feat">Feature</div>
+              <div>Dark mode toggle</div>
+              <div class="mockup-card-label">UI · Low priority</div>
+            </div>
+            <div class="mockup-card">
+              <div class="mockup-card-tag tag-ai">AI</div>
+              <div>Summarise board with GPT</div>
+              <div class="mockup-card-label">AI · High priority</div>
+            </div>
+            <div class="mockup-card">
+              <div class="mockup-card-tag tag-bug">Bug</div>
+              <div>Card drag ghost offset</div>
+              <div class="mockup-card-label">Frontend · Medium</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="mockup-col-head">In Progress <span class="col-count">2</span></div>
+            <div class="mockup-card">
+              <div class="mockup-card-tag tag-feat">Feature</div>
+              <div>Swimlane groups</div>
+              <div class="mockup-card-label">Backend · High priority</div>
+              <div class="ai-chip">⚡ AI suggested 3 subtasks</div>
+            </div>
+            <div class="mockup-card">
+              <div class="mockup-card-tag tag-ai">AI</div>
+              <div>LLM API key pairing flow</div>
+              <div class="mockup-card-label">Full-stack · High</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="mockup-col-head">Review <span class="col-count">1</span></div>
+            <div class="mockup-card">
+              <div class="mockup-card-tag tag-feat">Feature</div>
+              <div>PDF export for cards</div>
+              <div class="mockup-card-label">Frontend · Medium</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="mockup-col-head">Done <span class="col-count">2</span></div>
+            <div class="mockup-card">
+              <div class="mockup-card-tag tag-done">Done</div>
+              <div>Subtask checklist</div>
+              <div class="mockup-card-label">UI · Shipped</div>
+            </div>
+            <div class="mockup-card">
+              <div class="mockup-card-tag tag-done">Done</div>
+              <div>Board onboarding flow</div>
+              <div class="mockup-card-label">UX · Shipped</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="logos-strip">
+    <div class="wrap">
+      <p class="logos-label">Connect your preferred AI provider</p>
+      <div class="logos-row">
+        <span class="logo-pill" style="--pill-icon: url('{% static 'images/providers/anthropic.svg' %}')">Anthropic</span>
+        <span class="logo-pill" style="--pill-icon: url('{% static 'images/providers/openai.svg' %}')">OpenAI</span>
+        <span class="logo-pill" style="--pill-icon: url('{% static 'images/providers/googlegemini.svg' %}')">Gemini</span>
+        <span class="logo-pill" style="--pill-icon: url('{% static 'images/providers/mistral.svg' %}')">Mistral</span>
+        <span class="logo-pill" style="--pill-icon: url('{% static 'images/providers/deepseek.svg' %}')">Deepseek</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="features" id="product">
+    <div class="wrap">
+      <div class="features-header">
+        <div>
+          <span class="section-label">Features</span>
+          <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+        </div>
+        <p class="features-tagline">
+          Keep a clean record of your tasks.<br> Organize the way you like.<br> Find clarity in your notes with AI.
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🗂️</div>
+          <h3 class="feature-title">Boards &amp; Cards</h3>
+          <p class="feature-text">Capture everything — personal tasks, client work, side projects. Drag, reorder, and prioritize with ease.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3 class="feature-title">AI Assistant</h3>
+          <p class="feature-text">Pair your own API key and chat with your board. Find details, generate subtasks, and get unstuck fast.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📄</div>
+          <h3 class="feature-title">PDF Exports</h3>
+          <p class="feature-text">Export clean, audit-ready summaries in two clicks. No copy-paste, no formatting headaches.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏊</div>
+          <h3 class="feature-title">Swimlanes</h3>
+          <p class="feature-text">Group cards by team, priority or project phase with board swimlanes that keep your view meaningful.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📎</div>
+          <h3 class="feature-title">File Attachments</h3>
+          <p class="feature-text">Attach files directly to cards so all context lives in one place — no hunting across apps.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔓</div>
+          <h3 class="feature-title">Open Source</h3>
+          <p class="feature-text">The full source code is available on GitHub. Run it locally, inspect it, or suggest improvements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="story">
+
+    <section class="about__header anim anim-1" aria-labelledby="about-title">
+      <div class="about__eyebrow">The story</div>
+      <h1 id="about-title" class="about__title">
+        Why I built this
+      </h1>
+      <p class="about__subtitle">
+        An honest account from the solo developer behind KanbanGPT.
+      </p>
+    </section>
+
+    <div class="about__grid anim anim-2">
+
+      <article class="about__panel" aria-labelledby="why-title">
+        <span class="section-label">Origin</span>
+        <h2 id="why-title" class="about__panel-title">Where it came from</h2>
+        <p class="about__text">
+          I built KanbanGPT as a passion project — partly to improve my programming ability, and partly because I was genuinely
+          interested in the idea of creating a knowledge base for your tasks and having an AI assistant that can read, understand,
+          and help you find information within it.
+        </p>
+        <p class="about__text">
+          The idea came from my old job at a finance firm. We kept a lot of information about upcoming client interactions and
+          bank dealings on a Kanban board. I liked the system, but once cards accumulated a lot of detail it became hard to find
+          specific things quickly. I thought: what if the AI was just <em>inside</em> the board and already knew the context?
+        </p>
+        <p class="about__text">
+          I want to be honest — this app may not turn out to be a widely useful tool. It was an idea in my head that seemed good,
+          and I wanted to see what happens if I actually build it. I've tried to build it properly and avoid the "AI slop"
+          approach to programming that's become so common. That's not to say I haven't used AI — I have — but I care about the craft and real understanding behind software systems.
+        </p>
+
+        <div class="about__callout" role="note" aria-label="What's next">
+          <h3 class="about__callout-title">What's next</h3>
+          <p class="about__callout-text">
+            KanbanGPT is currently a solo tool. If there's enough interest I'd love to build out multi-user support.
+            Reach out with suggestions, bugs, or ideas — I'm genuinely open to all of it.
+          </p>
+        </div>
+      </article>
+
+      <aside class="about__panel about__panel--side" aria-label="Project details">
+        <span class="section-label">Open Source · Beta</span>
+        <h2 class="about__panel-title">Free to use &amp; inspect</h2>
+        <ul class="about__list">
+          <li>Hosted online — free for anyone to try</li>
+          <li>Full source code available on GitHub</li>
+          <li>Run it locally with your own OpenRouter API key</li>
+          <li>Built by one developer, actively maintained</li>
+          <li>May have bugs I haven't come across yet</li>
+          <li>Feature suggestions and bug reports always welcome</li>
+        </ul>
+
+        <div class="about__mini">
+          <p class="about__mini-title">Built for</p>
+          <ul class="about__pills" aria-label="Built for list">
+            <li>Developers</li>
+            <li>Students</li>
+            <li>Freelancers</li>
+            <li>Curious builders</li>
+          </ul>
+        </div>
+
+        <div class="about__beta-note" role="note">
+          <strong>Currently in Beta —</strong> The app is actively improving and there may be occasional rough edges.
+          The code is open source so you can follow along, contribute, or self-host.
+          <br><br>
+          <strong>Please note —</strong> Currently there is a free Openrouter API key connected that allows the AI assistant to function. But I will have to change it to a bring your own API key system if enough people start to use the app.
+          <br><br>
+          <a href="https://github.com/YOUR_GITHUB_REPO" target="_blank" rel="noopener noreferrer" class="about__github-link">
+            ★ View on GitHub →
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="about__values-row anim anim-3" aria-label="What I care about">
+      <div class="about__value-card">
+        <div class="about__value-icon">🎯</div>
+        <h3 class="about__value-title">Focus</h3>
+        <p class="about__value-text">A calm interface and a workflow that encourages progress, not clutter.</p>
+      </div>
+      <div class="about__value-card">
+        <div class="about__value-icon">🔓</div>
+        <h3 class="about__value-title">Openness</h3>
+        <p class="about__value-text">Open source code, honest communication, and no dark patterns — ever.</p>
+      </div>
+      <div class="about__value-card">
+        <div class="about__value-icon">🛠️</div>
+        <h3 class="about__value-title">Craft</h3>
+        <p class="about__value-text">Built with care over time. Not generated overnight.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="cta-banner">
+    <div class="wrap">
+      <div class="cta-inner">
+        <h2 class="cta-title">Give it a try</h2>
+        <p class="cta-sub">Set up your first board in under 2 minutes. Free to use, no credit card required.</p>
+        <a href="/sign-up" class="btn-primary-lg">Create your first board →</a>
+        <div class="cta-badges">
+          <span class="badge">Free to use</span>
+          <span class="badge">Open source</span>
+          <span class="badge">Setup in 2 minutes</span>
+          <span class="badge">Optimised for desktop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand">
+    <div class="nav-brand-icon">
+      <img src="{% static 'images/logo.png' %}" alt="kanbangpt icon" width="400">
+    </div>
+    KanbanGPT &copy; 2026
+  </div>
+  <nav class="footer-links" aria-label="Legal">
+    <a href="/privacy-policy/">Privacy Policy</a>
+    <a href="/terms-of-service/">Terms of Service</a>
+    <a href="/contact-us/">Contact Us</a>
+    <a href="#story">About</a>
+    <a href="https://github.com/YOUR_GITHUB_REPO" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</footer>
+
+{% endblock %}
