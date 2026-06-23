@@ -3,7 +3,7 @@
 {% block title %}KanbanGPT - AI-Powered Kanban Board{% endblock %}
 
 {% block additional_styles %}
-<link rel="stylesheet" href="{% static 'css/shopfront/about_page.css' %}">
+<link rel="stylesheet" href="{% static '/shopfront/about.css' %}">
 {% endblock %}
 
 {% block nav_links %}
@@ -19,13 +19,13 @@
   
   <section class="hero">
     <h1 class="hero-title anim-fade-up delay-1">
-      Think deeper, move faster,<br>and get things <em>done</em>
+      A place to store notes, manage tasks and work with <em>clarity</em>
     </h1>
     <p class="hero-sub anim-fade-up delay-2">
-      KanbanGPT is a digital kanban board that combines note-taking with AI — so you can brainstorm ideas, surface details, and get more done
+      KanbanGPT is a simple kanban board that combines note-taking with AI — each card on the board acts as a knowledge base where you can save files, record text/notes and interact with an AI assistant that unerstands the task at hand
     </p>
     <div class="hero-actions anim-fade-up delay-3">
-      <a href="/sign-up" class="btn-primary-lg">Start for free →</a>
+      <a href="/sign-up" class="btn-primary-lg">Free Signup →</a>
       <a href="#story" class="btn btn-outline-lg">About this project</a>
     </div>
     <p class="hero-meta anim-fade-up delay-4">Free to use &nbsp;·&nbsp; Open source &nbsp;·&nbsp; Currently in Beta</p>
@@ -157,7 +157,7 @@
         <div class="feature-card">
           <div class="feature-icon">🔓</div>
           <h3 class="feature-title">Open Source</h3>
-          <p class="feature-text">The full source code is available on GitHub. Run it locally, inspect it, or suggest improvements.</p>
+          <p class="feature-text">The full source code is available on GitHub. Run it locally, inspect it, or suggest improvements. The app is continously improving.</p>
         </div>
       </div>
     </div>
@@ -171,7 +171,7 @@
         Why I built this
       </h1>
       <p class="about__subtitle">
-        An honest account from the solo developer behind KanbanGPT.
+        From the dev behind KanbanGPT.
       </p>
     </section>
 
@@ -192,8 +192,7 @@
         </p>
         <p class="about__text">
           I want to be honest — this app may not turn out to be a widely useful tool. It was an idea in my head that seemed good,
-          and I wanted to see what happens if I actually build it. I've tried to build it properly and avoid the "AI slop"
-          approach to programming that's become so common. That's not to say I haven't used AI — I have — but I care about the craft and real understanding behind software systems.
+          and I wanted to see what happens if I actually build it.
         </p>
 
         <div class="about__callout" role="note" aria-label="What's next">
@@ -211,51 +210,21 @@
         <ul class="about__list">
           <li>Hosted online — free for anyone to try</li>
           <li>Full source code available on GitHub</li>
-          <li>Run it locally with your own OpenRouter API key</li>
-          <li>Built by one developer, actively maintained</li>
-          <li>May have bugs I haven't come across yet</li>
-          <li>Feature suggestions and bug reports always welcome</li>
+          <li>Run locally with your own OpenRouter key</li>
+          <li>Contributions, suggestions and bug reports welcome</li>
         </ul>
-
-        <div class="about__mini">
-          <p class="about__mini-title">Built for</p>
-          <ul class="about__pills" aria-label="Built for list">
-            <li>Developers</li>
-            <li>Students</li>
-            <li>Freelancers</li>
-            <li>Curious builders</li>
-          </ul>
-        </div>
 
         <div class="about__beta-note" role="note">
           <strong>Currently in Beta —</strong> The app is actively improving and there may be occasional rough edges.
           The code is open source so you can follow along, contribute, or self-host.
           <br><br>
-          <strong>Please note —</strong> Currently there is a free Openrouter API key connected that allows the AI assistant to function. But I will have to change it to a bring your own API key system if enough people start to use the app.
+          <strong>Please note —</strong> The current online hosted application only provides free models via OpenRouter.
           <br><br>
-          <a href="https://github.com/YOUR_GITHUB_REPO" target="_blank" rel="noopener noreferrer" class="about__github-link">
+          <a href="https://github.com/pbate44/KanbanGPT" target="_blank" rel="noopener noreferrer" class="about__github-link">
             ★ View on GitHub →
           </a>
         </div>
       </aside>
-    </div>
-
-    <div class="about__values-row anim anim-3" aria-label="What I care about">
-      <div class="about__value-card">
-        <div class="about__value-icon">🎯</div>
-        <h3 class="about__value-title">Focus</h3>
-        <p class="about__value-text">A calm interface and a workflow that encourages progress, not clutter.</p>
-      </div>
-      <div class="about__value-card">
-        <div class="about__value-icon">🔓</div>
-        <h3 class="about__value-title">Openness</h3>
-        <p class="about__value-text">Open source code, honest communication, and no dark patterns — ever.</p>
-      </div>
-      <div class="about__value-card">
-        <div class="about__value-icon">🛠️</div>
-        <h3 class="about__value-title">Craft</h3>
-        <p class="about__value-text">Built with care over time. Not generated overnight.</p>
-      </div>
     </div>
 
   </section>
@@ -289,7 +258,7 @@
     <a href="/terms-of-service/">Terms of Service</a>
     <a href="/contact-us/">Contact Us</a>
     <a href="#story">About</a>
-    <a href="https://github.com/YOUR_GITHUB_REPO" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://github.com/pbate44/KanbanGPT" target="_blank" rel="noopener noreferrer">GitHub</a>
   </nav>
 </footer>
 
